@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reaction Time Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section id="menuScreen" class="menu-screen" aria-labelledby="menu-title">
+      <p class="eyebrow">Reaction trainer</p>
+      <h1 id="menu-title">Reaction Game</h1>
+      <p class="menu-copy">Choose a mode and get ready for the next light.</p>
+
+      <div class="mode-actions">
+        <button id="practiceButton" class="mode-button primary" type="button">
+          Practice
+        </button>
+        <button id="competitionButton" class="mode-button secondary" type="button">
+          Competition
+        </button>
+      </div>
+
+      <p id="menuMessage" class="menu-message" aria-live="polite"></p>
+    </section>
+
+    <section id="gameScreen" class="game-panel is-hidden" aria-labelledby="game-title">
+      <div class="title-row">
+        <div>
+          <p class="eyebrow">Reaction trainer</p>
+          <h1 id="game-title">Reaction Game</h1>
+        </div>
+        <div class="game-actions">
+          <button id="homeButton" class="header-button secondary" type="button">Home</button>
+          <button id="restartButton" class="header-button" type="button">Restart</button>
+        </div>
+      </div>
+
+      <div id="statusMessage" class="status-message" aria-live="polite">
+        Get ready...
+      </div>
+
+      <div class="button-grid" aria-label="Reaction buttons">
+        <button class="pad" data-key="w" type="button" aria-label="Top left, press W">
+          <span class="key-label">W</span>
+        </button>
+        <button class="pad" data-key="e" type="button" aria-label="Top right, press E">
+          <span class="key-label">E</span>
+        </button>
+        <button class="pad" data-key="s" type="button" aria-label="Bottom left, press S">
+          <span class="key-label">S</span>
+        </button>
+        <button class="pad" data-key="d" type="button" aria-label="Bottom right, press D">
+          <span class="key-label">D</span>
+        </button>
+      </div>
+
+      <dl class="stats">
+        <div class="stat">
+          <dt>Last</dt>
+          <dd id="lastTime">-- ms</dd>
+        </div>
+        <div class="stat">
+          <dt>Average</dt>
+          <dd id="averageTime">-- ms</dd>
+        </div>
+        <div class="stat">
+          <dt>Best</dt>
+          <dd id="bestTime">-- ms</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
