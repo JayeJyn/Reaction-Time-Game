@@ -1,4 +1,4 @@
-# Reaction Game
+# Reaction-Time-Game
 
 A small browser-based reaction trainer inspired by Batak machines. The game lights up one target at a time and challenges players to press the matching keyboard key as quickly as possible.
 
